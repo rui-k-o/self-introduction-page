@@ -1,2 +1,25 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html>
+<head>
+  <title>自己紹介</title>
+</head>
+<body>
+
+  <h1>自己紹介</h1>
+
+  <img src="image.png" alt="Profile ">
+
+  <h2>名前</h2>
+  <p>RUI</p>
+
+  <h2>プロフィール</h2>
+  <p>物流業界で働いています。現在ITエンジニアを目指して勉強中です。</p>
+
+  <h2>学習内容</h2>
+  <p>HTML / CSS / JavaScript を学習しています。</p>
+
+  <h2>目標</h2>
+  <p>未経験ではありますが、Webエンジニアとして転職を考えています。</p>
+
+</body>
+</html>
