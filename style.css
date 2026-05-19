@@ -1,0 +1,415 @@
+/* 背景色とフォント設定 */
+body {
+    background-color: #dfdddd;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* h2フォント設定 */
+h2 {
+    font-family: serif;
+    font-style: italic;
+}
+
+/* 画像の調整 */
+img {
+    width: 600px;
+    margin-top: 10px;
+}
+
+/* 全体の横幅制限 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* h2タグの余白調整 */
+h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* 全体白カードのスタイル */
+.background-card {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+/* Logistcs x ITロゴ装飾 */
+.logo {
+    margin-top: 60px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* nameフォント */
+.name {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+/* subtitleフォント */
+.subtitle {
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* skills全体 */
+.skills-tag {
+    margin-top: 20px;
+}
+
+/* skillsタグ */
+.skills-tag span {
+    background-color: #555;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 2px;
+}
+
+/* EXPERIENCEカード配置 */
+.experience-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* EXPERIENCEカードのデザイン */
+.experience-card {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    min-height: 200px;
+}
+
+/* EXPERIENCEカードタイトル */
+.experience-card-header {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding: 10px;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.experience-header-text {
+    margin: 0;
+    font-style: oblique;
+    font-size: 22px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* EXPERIENCEカード本文 */
+.experience-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    text-align: left;
+    width: 60%;
+    padding: 5px 20px;
+    border-left: 1px solid #555;
+    line-height: 1.8;
+}
+
+/* ECPERIENCE本文中のh3デザイン */
+.experience-title {
+    margin-bottom: 0;
+}
+
+/* EXPERIENCEカード画像の横幅 */
+.experience-card-image {
+    width: 30%;
+    aspect-ratio: 4 / 3;
+    flex-shrink: 0;
+}
+
+.experience-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* PROJECTカード配置 */
+.project-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* PROJECTカードのデザイン */
+.project-card {
+    background-color: #fff;
+    width: 75%;
+    padding: 10px;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+    /* 影の基準点にする */
+    overflow: hidden;
+    /* 飛び出た影を隠す */
+}
+
+/* PROJECTカード　ホバー時に左から右へ影移動 */
+.project-card:hover::before {
+    pointer-events: none;
+    transform: skew(-20deg) translateX(150%);
+    transition: transform 0.7s ease-out;
+}
+
+/* 影を左側に隠す */
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-20deg) translateX(-150%);
+    transition: transform 0s;
+}
+
+/* PROJECTカードタイトル */
+.project-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-bottom: 1px solid #555;
+}
+
+.project-card-title {
+    margin: 0;
+    font-style: oblique;
+    text-align: left;
+    font-size: 22px;
+    width: 90%;
+    color: black;
+}
+
+/* PROJECTカード本文 */
+.project-card-content {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* PROJECTカード画像の横幅 */
+.project-card-image {
+    width: 10%;
+}
+
+.project-card-image img {
+    width: 100%;
+}
+
+/* menuカードデザイン */
+.menu-card {
+    display: flex;
+    flex-wrap: wrap;
+    /* 画面幅に応じて折り返す */
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    /* 折り返し時の上下隙間 */
+}
+
+.menu-card a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    white-space: nowrap;
+    /* リンク文字と「｜」が途中で切れるのを防ぐ */
+}
+
+/* menuを縦線で区切る */
+.menu-card a+a::before {
+    content: "|";
+    color: #000;
+    margin: 0 20px;
+    display: inline-block;
+}
+
+/* nav menu　ホバー時上に動く&色変更 */
+.menu-card a span {
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-card a:hover span {
+    transform: scale(1.08);
+    opacity: 0.7;
+}
+
+/* TOPへ戻るボタン */
+html {
+    scroll-behavior: smooth;
+}
+
+.page-top-btn {
+    position: fixed;
+    right: 100px;
+    bottom: 50px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.page-top-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* スマホ時にハンバーガーメニュー */
+.menu-trigger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-trigger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    /* 三本線のデザイン */
+    .menu-trigger span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        transition: all 0.3s;
+    }
+
+    .menu-trigger span:nth-child(1) {
+        top: 0;
+    }
+
+    .menu-trigger span:nth-child(2) {
+        top: 11px;
+    }
+
+    .menu-trigger span:nth-child(3) {
+        top: 22px;
+    }
+
+    /* ボタンがアクティブの時の三本線アニメーション */
+    .menu-trigger.active span:nth-child(1) {
+        top: 11px;
+        transform: rotate(-45deg);
+    }
+
+    .menu-trigger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-trigger.active span:nth-child(3) {
+        top: 11px;
+        transform: rotate(45deg);
+    }
+
+    /* デザイン基本設定　**スマホ時はメニューカード隠す */
+    .menu-card {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* 右側に隠す */
+        width: 100%;
+        /* 画面全体を覆う */
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transition: all 0.3s;
+        z-index: 99;
+    }
+
+    /* メニューが開いたとき */
+    .menu-card.active {
+        right: 0;
+    }
+}
+
+
+/* 画面幅が768px以下の設定 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* 縦並びに切り替える */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* 画像がスマホ画面からはみ出さないようにリセット */
+    img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+
+    /* 白カードの左右余白をスマホ向けに狭くする */
+    .background-card {
+        padding: 20px;
+    }
+
+    /* スマホメニュー内の縦線を消す */
+    nav.menu-card.active a::before {
+        content: none;
+    }
+
+    nav-menu-card.active a {
+        border-left: none;
+    }
+
+    /* TOPへ戻るボタンを右端に移動 */
+    .page-top-btn {
+        right: 15px;
+        bottom: 15px;
+    }
+}
