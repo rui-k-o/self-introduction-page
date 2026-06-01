@@ -8,9 +8,24 @@ body {
 
 /* h2フォント設定 */
 h2 {
-    font-family: serif;
+    font-family: serif, arial, 'Noto Sans JP';
     font-style: italic;
 }
+
+/* ==== TOPへ戻る ==== */
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+/* ==== TOP ==== */
 
 /* 画像の調整 */
 img {
@@ -65,6 +80,8 @@ h2 {
     letter-spacing: 0.5px;
 }
 
+/* ==== SKILLS ==== */
+
 /* skills全体 */
 .skills-tag {
     margin-top: 20px;
@@ -80,6 +97,8 @@ h2 {
     font-size: 14px;
     margin: 2px;
 }
+
+/* ==== EXPERIENCE ==== */
 
 /* EXPERIENCEカード配置 */
 .experience-card-container {
@@ -149,6 +168,57 @@ h2 {
     object-fit: cover;
 }
 
+/* スマホ時のEXPERIENCEカード */
+@media (max-width: 768px) {
+    .experience-card {
+        flex-direction: column;
+        height: auto;
+        width: 85%;
+        margin: 0 auto;
+        padding: 20px 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .experience-card-image {
+        width: 45px;
+        transform: translateY(-3px);
+    }
+
+    .experience-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 2px;
+    }
+
+    .experience-header-text {
+        font-size: 18px;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .experience-card-content {
+        width: 100%;
+        border-left: none;
+        padding-left: 58px;
+        box-sizing: border-box;
+    }
+
+    .experience-title {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .experience-card-content ul {
+        margin: 0;
+        padding-left: 20px;
+        line-height: 1.8;
+    }
+}
+
+/* ==== PROJECT ===== */
+
 /* PROJECTカード配置 */
 .project-card-container {
     display: flex;
@@ -180,6 +250,7 @@ h2 {
     pointer-events: none;
     transform: skew(-20deg) translateX(150%);
     transition: transform 0.7s ease-out;
+    border-bottom: 2px solid #333;
 }
 
 /* 影を左側に隠す */
@@ -212,7 +283,7 @@ h2 {
     font-style: oblique;
     text-align: left;
     font-size: 22px;
-    width: 90%;
+    width: auto;
     color: black;
 }
 
@@ -231,6 +302,35 @@ h2 {
 .project-card-image img {
     width: 100%;
 }
+
+.project-link {
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+.project-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+
+    /* アニメーションの初期状態 */
+    transform: scaleX(0);
+    transform-origin: left top;
+    transition: transform 0.3s ease;
+}
+
+/* ホバー時左から右へ伸ばす */
+.project-link:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* ==== MENU ==== */
 
 /* menuカードデザイン */
 .menu-card {
@@ -271,7 +371,190 @@ h2 {
     opacity: 0.7;
 }
 
-/* TOPへ戻るボタン */
+/* ==== PORTFOLIO ==== */
+
+.portfolio-section {
+    display: flex;
+    gap: 10px;
+}
+
+/* 横に均等に並べる */
+.portfolio-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+.portfolio-block ul {
+    text-align: left;
+    padding-left: 16px;
+    margin: 0;
+}
+
+
+/* portfolioカードデザイン */
+
+.portfolio-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.portfolio-card {
+    width: 75%;
+    padding: 10px;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* 制作サイト画面タイトルデザイン */
+
+.portfolio-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.portfolio-card-header img {
+    width: 8%;
+    height: 8%;
+    margin-top: 10px;
+}
+
+.portfolio-card-header h3 {
+    font-style: oblique;
+    text-align: left;
+    font-size: 22px;
+    width: auto;
+    color: #000;
+}
+
+/* 制作画面各デバイスデザイン */
+
+/* portfolio-box横並び */
+.portfolio-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* 1デバイス分 */
+.portfolio-device {
+    display: flex;
+    width: 260px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.portfolio-device-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+
+.portfolio-device-name p {
+    margin: 0;
+}
+
+.portfolio-device-name img {
+    width: 40px;
+    margin-top: 0;
+}
+
+
+.portfolio-mockup img {
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    /* ホバー時に大きくして色を薄くする */
+}
+
+
+.portfolio-mockup.pc img {
+    max-width: 250px;
+}
+
+.portfolio-mockup.mobile img {
+    max-width: 100px;
+}
+
+
+.portfolio-mockup img:hover {
+    transform: scale(1.08);
+    opacity: 0.7;
+}
+
+/* popup-contentデザイン */
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ポップアップ画像 */
+.popup-image {
+    max-width: 95vw;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* クリックで閉じる */
+.popup-text {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+
+/* ポップアップ背景 */
+.popup-overlay {
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* ===== TOPへ戻るボタン ==== */
+
 html {
     scroll-behavior: smooth;
 }
@@ -376,11 +659,16 @@ html {
 }
 
 
+
 /* 画面幅が768px以下の設定 */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         /* 縦並びに切り替える */
+    }
+
+    .project-card-image {
+        width: 45px;
     }
 }
 
@@ -401,10 +689,6 @@ html {
     /* スマホメニュー内の縦線を消す */
     nav.menu-card.active a::before {
         content: none;
-    }
-
-    nav-menu-card.active a {
-        border-left: none;
     }
 
     /* TOPへ戻るボタンを右端に移動 */
