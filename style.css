@@ -329,6 +329,26 @@ h2 {
     transform: scaleX(1);
 }
 
+/* PROJECTリンクタグ */
+.link-tag {
+    margin-top: 20px;
+}
+
+.link-tag span {
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.link-tag span:hover {
+    transform: scale(1.08);
+    opacity: 0.7;
+}
 
 /* ==== MENU ==== */
 
@@ -371,15 +391,15 @@ h2 {
     opacity: 0.7;
 }
 
-/* ==== PORTFOLIO ==== */
+/* ==== PROJECTリンク先ページ ==== */
 
-.portfolio-section {
+.project-section {
     display: flex;
     gap: 10px;
 }
 
 /* 横に均等に並べる */
-.portfolio-block {
+.project-block {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -388,7 +408,7 @@ h2 {
     gap: 20px;
 }
 
-.portfolio-block ul {
+.project-block ul {
     text-align: left;
     padding-left: 16px;
     margin: 0;
