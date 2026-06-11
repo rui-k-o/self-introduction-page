@@ -28,7 +28,7 @@ h2 {
 /* ==== TOP ==== */
 
 /* 画像の調整 */
-img {
+.page-top-btn {
     width: 600px;
     margin-top: 10px;
 }
@@ -45,6 +45,14 @@ h2 {
     margin-top: 50px;
     margin-bottom: 20px;
     letter-spacing: 1px;
+}
+
+.header-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
 }
 
 /* 全体白カードのスタイル */
@@ -398,6 +406,18 @@ h2 {
     gap: 10px;
 }
 
+.project-block-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.project-block-header img {
+    width: 20px;
+    height: 20px;
+}
+
 /* 横に均等に並べる */
 .project-block {
     flex: 1;
@@ -408,11 +428,35 @@ h2 {
     gap: 20px;
 }
 
-.project-block ul {
+.project-block ul,
+.project-block p {
     text-align: left;
     padding-left: 16px;
     margin: 0;
 }
+
+/* 画面幅が768px以下の設定 */
+
+@media (max-width: 768px) {
+    .project-section {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .project-block {
+        padding: 20px;
+    }
+
+    .project-block-header img {
+        margin-top: 15px;
+    }
+
+    .project-block h3 {
+        margin-bottom: 0;
+    }
+}
+
 
 
 /* portfolioカードデザイン */
@@ -469,6 +513,41 @@ h2 {
     gap: 40px;
     align-items: flex-start;
     width: 100%;
+}
+
+.portfolio-box2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: middle;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.portfolio-box-left {
+    display: flex;
+    width: 25%;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.portfolio-box-left img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.portfolio-box-left img:hover {
+    transform: scale(1.08);
+    opacity: 0.7;
+}
+
+
+.portfolio-box-right {
+    display: flex;
+    width: 75%;
+    padding-right: 10px;
+    text-align: left;
 }
 
 /* 1デバイス分 */
@@ -695,7 +774,7 @@ html {
 @media (max-width: 768px) {
 
     /* 画像がスマホ画面からはみ出さないようにリセット */
-    img {
+    .header-img {
         width: 100%;
         max-width: 600px;
         height: auto;

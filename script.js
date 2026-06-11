@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupImg = document.getElementById('popupImage');
 
     // ページ内にある「data-image」を持ったすべての画像を監視
-    const targetImages = document.querySelectorAll('.portfolio-mockup img[data-image]');
+    const targetImages = document.querySelectorAll('img[data-image]');
 
     // ポップアップ要素がないページでは処理しない
     if (!popup || !popupImg) {

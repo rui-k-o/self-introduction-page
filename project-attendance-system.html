@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <title>自己紹介ポートフォリオ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勤怠・給与管理シート</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,25 +26,177 @@
 
             <section class="project-section">
                 <div class="project-block">
-                    <h3>使用技術</h3>
+                    <div class="project-block-header">
+                        <img src="image/pen-icon.png">
+                        <h3>使用技術</h3>
+                    </div>
                     <div class="skills-tag">
                         <span>Google Sheets</span><span>Google Apps Script</span>
                     </div>
                 </div>
 
                 <div class="project-block">
-                    <h3>工夫した点</h3>
+                    <div class="project-block-header">
+                        <img src="image/pen-icon.png">
+                        <h3>工夫した点</h3>
+                    </div>
                     <ul>
-                        <li>業務効率化のために自動化を設計</li>
-                        <li>残業代の当月払い/翌月払い別に管理</li>
+                        <li>法定内・法定外・深夜・休日労働を自動判定</li>
+                        <li>20日締めの残業集計に対応</li>
+                        <li>社員入力用と管理用シートを分離</li>
+                        <li>年間集計シートへ自動反映</li>
                     </ul>
                 </div>
             </section>
+            <section class="project-section">
+                <div class="project-block">
+                    <div class="project-block-header">
+                        <img src="image/pen-icon.png">
+                        <h3>制作背景</h3>
+                    </div>
+                    <p>
+                        従業員ごとの勤怠集計、残業計算、有給管理、給与計算を個別に行っており、集計ミスや確認工数が発生していました。
+                        <br>
+                        そこでGoogle SheetsとGoogle Apps Scriptを活用し、勤怠入力から給与計算までを一元管理できる仕組みを構築しました。
+                    </p>
+                </div>
+            </section>
+            <section class="project-section">
+                <div class="project-block">
+                    <div class="project-block-header">
+                        <img src="image/pen-icon.png">
+                        <h3>シート構成</h3>
+                    </div>
+                    <ul>
+                        <li>社員別勤怠入力シート</li>
+                        <li>年間集計シート</li>
+                        <li>月次集計シート</li>
+                        <li>祝日・会社休日管理シート</li>
+                        <li>給与計算シート</li>
+                    </ul>
+                </div>
+                <div class="project-block">
+                    <div class="project-block-header">
+                        <img src="image/pen-icon.png">
+                        <h3>実装した機能</h3>
+                    </div>
+                    <ul>
+                        <li>勤務時間の自動計算</li>
+                        <li>残業時間の自動集計</li>
+                        <li>法定内・法定外残業の自動判定</li>
+                        <li>深夜労働時間の自動計算</li>
+                        <li>休日労働時間の自動計算</li>
+                        <li>有給取得日数の自動集計</li>
+                        <li>IMPORTRANGEによる全社員集計</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>画面イメージ</h2>
+                <div class="portfolio-card-container">
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-header">
+                            <img src="image/portfolio-title-icon.png" alt="">
+                            <div class="portfolio-card-title"></div>
+                            <h3>社員別入力シート</h3>
+                        </div>
+                    </div>
 
+                    <div class="portfolio-box2">
+                        <div class="portfolio-box-left">
+                            <img src="image/individual-sheet.jpg" data-image="image/individual-sheet.jpg" alt="個別管理シート">
+                        </div>
+
+                        <div class="portfolio-box-right">
+                            <ul>
+                                <li>労働時間/法定外労働時間を自動算出</li>
+                                <li>早出出勤は承認制にし、GASを使用し該当セルのみ表示</li>
+                                <li>極力手入力を減らすことで入力ミス防止・作業時間削減</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-header">
+                            <img src="image/portfolio-title-icon.png" alt="">
+                            <div class="portfolio-card-title"></div>
+                            <h3>一括管理シート</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-box2">
+                        <div class="portfolio-box-left">
+                            <img src="image/management-sheet.jpg" data-image="image/management-sheet.jpg" alt="一括管理シート">
+                        </div>
+
+                        <div class="portfolio-box-right">
+                            <ul>
+                                <li>法定外労働時間を深夜/休日等に分け、労基法判定用を可視化</li>
+                                <li>社員別シートから自動取込で転記ミス防止</li>
+                                <li>社員別/月別を一覧で管理</li>
+                                <li>残業代は20日締めのため、別途管理</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-header">
+                            <img src="image/portfolio-title-icon.png" alt="">
+                            <div class="portfolio-card-title"></div>
+                            <h3>年間集計シート</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-box2">
+                        <div class="portfolio-box-left">
+                            <img src="image/yearly-sheet.png" data-image="image/yearly-sheet.png" alt="年間集計シート">
+                        </div>
+
+                        <div class="portfolio-box-right">
+                            <ul>
+                                <li>年間の社員別労働日数/有休消化日数/欠勤日数/時間外労働を一覧表示</li>
+                                <li>有休付与スケジュールで社員別に有給消化/消滅日数を自動計算で管理</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-header">
+                            <img src="image/portfolio-title-icon.png" alt="">
+                            <div class="portfolio-card-title"></div>
+                            <h3>給与管理シート</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-box2">
+                        <div class="portfolio-box-left">
+                            <img src="image/salary-sheet.png" data-image="image/salary-sheet.png" alt="給与管理シート">
+                        </div>
+
+                        <div class="portfolio-box-right">
+                            <ul>
+                                <li>人件費を一覧表示</li>
+                                <li>会社負担/従業員負担の控除額を一元管理</li>
+                                <li>社員マスタと会社マスタを使い、料率変更、給与変更等に対応</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
             <p class="logo">Logistics x IT</p>
 
         </div> <!-- background-card -->
     </div> <!-- container -->
+
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <img id="popupImage" class="popup-image" src="" alt="詳細画像">
+
+            <p class="popup-text">クリックで閉じる</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
