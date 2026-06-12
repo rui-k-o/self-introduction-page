@@ -519,7 +519,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    align-items: middle;
+    align-tracks: center;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -548,6 +548,24 @@ h2 {
     width: 75%;
     padding-right: 10px;
     text-align: left;
+}
+
+@media (max-width: 768px) {
+    .portfolio-box2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-box-left,
+    .portfolio-box-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .portfolio-box-left img {
+        max-width: 260px;
+        margin: 0 auto;
+    }
 }
 
 /* 1デバイス分 */
